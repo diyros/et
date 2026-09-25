@@ -1,0 +1,24 @@
+{
+  "name": "EdgeOne-Pages-edgetunnel",
+  "version": "1.0.0",
+  "description": "优选订阅生成器 - EdgeOne Pages多功能面板",
+  "functions": {
+    "directory": "functions"
+  },
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "_worker.js"
+    }
+  ],
+  "env": {
+    "NODE_VERSION": "18"
+  },
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/sub",
+      "statusCode": 301
+    }
+  ]
+}
